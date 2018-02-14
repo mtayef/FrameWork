@@ -4,7 +4,7 @@
   <test name="Test">
  <!--  <parameter name="Browser" value="IE"/> -->
     <classes>
-      <class name="applicationTestCases.AddUsers"/>
+      <class name="applicationTestCases.AddUser"/>
     </classes>
   </test> 
 </suite>
