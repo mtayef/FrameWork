@@ -2,8 +2,6 @@ package applicationPages;
 
 import java.util.List;
 
-//import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,17 +36,17 @@ public class UserPage {
 		Utility.waitForWebElement(driver, username, 20).sendKeys(name);
 		Utility.waitForWebElement(driver, employee, 20).sendKeys("a");
 		
-		List<WebElement> list =driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]/script"));	
+		List<WebElement> list=driver.findElements(By.xpath("//div[@class='ac_results']//li"));	
 		 
-		 for (WebElement element : list) {
+		for (WebElement element : list) {
 			String text = element.getAttribute("innerHTML");
-			if(text.contains("Fiona")) 
+			if(text.contains("Robert")) 
 			{
 				element.click();
 				break;
 			}
 			
-		 }
+		 } 
 }
 	
 	
