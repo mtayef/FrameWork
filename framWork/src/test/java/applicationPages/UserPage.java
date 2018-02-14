@@ -38,7 +38,7 @@ public class UserPage {
 		Utility.waitForWebElement(driver, username, 20).sendKeys(name);
 		Utility.waitForWebElement(driver, employee, 20).sendKeys("a");
 		
-		List<WebElement> list =driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]//script"));	
+		List<WebElement> list =driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]/script"));	
 		 
 		 for (WebElement element : list) {
 			String text = element.getAttribute("innerHTML");
