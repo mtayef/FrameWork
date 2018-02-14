@@ -1,5 +1,7 @@
 package applicationPages;
 
+import java.util.List;
+
 //import java.util.List;
 
 import org.openqa.selenium.By;
@@ -19,7 +21,7 @@ public class UserPage {
 		this.driver=ldriver;
 	}
 	
-	@FindBy(how = How.XPATH, using = "//b[text()='admin']")WebElement admin;
+	@FindBy(how = How.XPATH, using = "//b[text()='Admin']")WebElement admin;
 	@FindBy(how = How.XPATH, using = "//a[text()='User Management']")WebElement userManagment;
 	@FindBy(how = How.ID, using = "menu_admin_viewSystemUsers")WebElement user;
 	@FindBy(how = How.ID, using = "btnAdd")WebElement addButton;
@@ -36,9 +38,7 @@ public class UserPage {
 		Utility.waitForWebElement(driver, username, 20).sendKeys(name);
 		Utility.waitForWebElement(driver, employee, 20).sendKeys("a");
 		
-		 int count =driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]//script")).size();	
-		 System.out.println(count);
-		 /*List<WebElement> list =driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]//script"));	
+		List<WebElement> list =driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]//script"));	
 		 
 		 for (WebElement element : list) {
 			String text = element.getAttribute("innerHTML");
@@ -47,8 +47,9 @@ public class UserPage {
 				element.click();
 				break;
 			}
-	}
-		  */	}
+			
+		 }
+}
 	
 	
 }
