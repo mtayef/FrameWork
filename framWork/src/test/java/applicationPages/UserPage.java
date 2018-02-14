@@ -38,7 +38,8 @@ public class UserPage {
 		Utility.waitForWebElement(driver, username, 20).sendKeys(name);
 		Utility.waitForWebElement(driver, employee, 20).sendKeys("a");
 		
-		System.out.println(driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]//script")).size());
+		int count = driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]//script")).size();
+		System.out.println(count);
 		
 		/* List<WebElement> list =driver.findElements(By.xpath("//*[@id='frmSystemUser']/li[2]//script"));	
 		 
