@@ -19,5 +19,7 @@ public class ApplicationLogin2 extends BaseClass
 		login.enterPassword(DataProviderFactory.getExcel().getStringData("Login", 0, 1));
 		login.clickOnLoginButton();
 		//logger.log(LogStatus.PASS, "User is able to login");
+		
+		//checking history		
 	}
 }
