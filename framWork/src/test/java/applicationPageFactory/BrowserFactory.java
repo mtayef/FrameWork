@@ -89,8 +89,8 @@ public class BrowserFactory {
 		cap.setCapability("os", OSName);
 		cap.setCapability("os_version", version);
 
-		final String USERNAME = "mukeshotwani3";
-		final String AUTOMATE_KEY = "s4GTbs4fFzQxJxzpzp2f";
+		final String USERNAME = "test15057";
+		final String AUTOMATE_KEY = "1CmZWt4uLdB4VpdvhhgA";
 		final String hubURL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 		URL urlCloud = null;

@@ -89,10 +89,17 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile>
 					</suiteXmlFiles>
-					<!-- <systemPropertyVariables>
+					
+					<systemPropertyVariables>
+					
 					<RuntimeBrowser>${Browser}</RuntimeBrowser>
+					
+					<OSName>${OSName}</OSName>
+					
+					<OSVersion>${version}</OSVersion>
+					
 					</systemPropertyVariables>
- -->
+					
 				</configuration>
 			</plugin>
 
