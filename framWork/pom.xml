@@ -89,10 +89,10 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile>
 					</suiteXmlFiles>
-					<systemPropertyVariables>
+					<!-- <systemPropertyVariables>
 					<RuntimeBrowser>${Browser}</RuntimeBrowser>
 					</systemPropertyVariables>
-
+ -->
 				</configuration>
 			</plugin>
 
