@@ -16,11 +16,18 @@ public class AddUser extends BaseClassCloud
 	public void loginToApp() 
 	{
 		logger= report.startTest("This test is adding a user");
+		
 		LoginPage login = PageFactory.initElements(driver,LoginPage.class);
+		
+		
 		UserPage user = PageFactory.initElements(driver, UserPage.class);
+		
 		login.enterUserName(DataProviderFactory.getExcel().getStringData("Login", 0, 0));
+		
 		login.enterPassword(DataProviderFactory.getExcel().getStringData("Login", 0, 1));
+		
 		login.clickOnLoginButton();
+		
 		user.addUser("test");
 		//logger.log(LogStatus.PASS, "User is able to login");
 		
