@@ -13,7 +13,7 @@ public class AddUser extends BaseClassCloud
 {
 	
 	@Test
-	public void loginToApp() 
+	public void addUser() 
 	{
 		logger= report.startTest("This test is adding a user");
 		
