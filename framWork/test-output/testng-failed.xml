@@ -3,16 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="unitTestCase.MercuryTest"/>
+      <class name="unitTestCase.ValidateDatabase"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="unitTestCase.MercuryTest">
-        <methods>
-          <include name="mercuryGridTest"/>
-        </methods>
-      </class> <!-- unitTestCase.MercuryTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
