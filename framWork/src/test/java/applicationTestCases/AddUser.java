@@ -9,7 +9,7 @@ import applicationPages.UserPage;
 import helper.BaseClass;
 //import helper.BaseClassCloud;
 
-public class AddUser extends BaseClass
+public class AddUser extends BaseClassCloud
 {
 	
 	@Test
