@@ -6,8 +6,8 @@ import org.testng.annotations.Test;
 import applicationPageFactory.DataProviderFactory;
 import applicationPages.LoginPage;
 import applicationPages.UserPage;
-import helper.BaseClass;
-//import helper.BaseClassCloud;
+//import helper.BaseClass;
+import helper.BaseClassCloud;
 
 public class AddUser extends BaseClassCloud
 {
