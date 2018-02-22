@@ -7,7 +7,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,7 +19,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-
 public class Utility {
 	public static String getCurrentDateTime() 
 	{
@@ -32,7 +30,8 @@ public class Utility {
 	
 	public static String captureScreenShot(WebDriver driver) 
 	{
-		String screenshotpath = System.getProperty("user.dir")+"/Screenshots/"+Utility.getCurrentDateTime()+".png";
+		String screenshotpath = System.getProperty
+				("user.dir")+"/Screenshots/"+Utility.getCurrentDateTime()+".png";
 		File dest = new File(screenshotpath);
 		TakesScreenshot ts=(TakesScreenshot)driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
@@ -48,15 +47,17 @@ public class Utility {
 	public static void highLightElement(WebDriver driver, WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; "
+				+ "border: 2px solid red;');", element);
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
-
+  
 			System.out.println(e.getMessage());
 		}
 
-		js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');", element);
+		js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');",
+				element);
 
 	}
 	public static void syncWebElement(WebDriver driver, WebElement element, int time) {
@@ -149,8 +150,12 @@ public class Utility {
 			}
 
 			System.out.println("Response Code from Server is " + code);
+			if (code!=200)
+			{
+				System.out.println("Broken link is: "+ hrefurl);
+			}
 			soft.assertEquals(code, 200);
-
+			
 		}
 
 		soft.assertAll();

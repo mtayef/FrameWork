@@ -114,7 +114,7 @@ public class BrowserFactory {
 		}else if (browser.equalsIgnoreCase("Firefox"))
 		{
 			cap.setCapability("browser", "Firefox");
-
+			
 			driver = new RemoteWebDriver(urlCloud, cap);
 
 		} else if (browser.equalsIgnoreCase("IE")) 

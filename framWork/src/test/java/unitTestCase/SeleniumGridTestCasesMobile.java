@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 
 public class SeleniumGridTestCasesMobile {
 
-	public static final String USERNAME = "mukeshotwani3";
-	public static final String AUTOMATE_KEY = "s4GTbs4fFzQxJxzpzp2f";
+	public static final String USERNAME = "test15057";
+	public static final String AUTOMATE_KEY = "1CmZWt4uLdB4VpdvhhgA";
 	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 	@Test

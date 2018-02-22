@@ -15,7 +15,7 @@ public class VerifyLinks {
 
 	}
 
-	@Test(enabled = false)
+	@Test
 	public void testlinks1() {
 
 		WebDriver driver = BrowserFactory.startApplication("Chrome", "http://hc.apache.org/httpclient-3.x/");
@@ -24,7 +24,7 @@ public class VerifyLinks {
 
 	}
 
-	@Test
+	@Test (enabled = false)
 	public void testImages1() {
 
 		WebDriver driver = BrowserFactory.startApplication("Chrome", "http://demoqa.com/");
