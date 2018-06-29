@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -28,7 +29,9 @@ public class BrowserFactory {
 		{
 			
 			System.setProperty("webdriver.chrome.driver", "./Browser/chromedriver.exe");
-			driver=new ChromeDriver(cap);
+			ChromeOptions options = new ChromeOptions();
+			options.merge(cap);
+			driver=new ChromeDriver(options);
 		}
 		else if (browser.equalsIgnoreCase("ChromeHeadless")) 
 		{
@@ -38,7 +41,8 @@ public class BrowserFactory {
 			cap.setCapability(ChromeOptions.CAPABILITY, options);
 			System.setProperty("webdriver.chrome.driver", "./Browser/chromedriver.exe");
 			
-			driver=new ChromeDriver(cap);
+			options.merge(cap);
+			driver=new ChromeDriver(options);
 		}
 		else if (browser.equalsIgnoreCase("FirefoxHeadless")) 
 		{
@@ -47,20 +51,25 @@ public class BrowserFactory {
 			System.setProperty("webdriver.gecko.driver", "./Browser/geckodriver.exe");
 			FirefoxOptions options = new FirefoxOptions();
 			options.setBinary(binary);
-			cap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);		
-			driver = new FirefoxDriver(cap);
+			cap.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
+			options.merge(cap);
+			driver = new FirefoxDriver(options);
 			
 		}
 		else if(browser.equalsIgnoreCase("Firefox"))
 		{
+			FirefoxOptions options = new FirefoxOptions();
 			System.setProperty("webdriver.gecko.driver", "./Browser/geckodriver.exe");
-			driver=new FirefoxDriver(cap);
+			options.merge(cap);
+			driver=new FirefoxDriver(options);
 		} 
 		else if(browser.equalsIgnoreCase("IE"))
 		{
 			cap.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING, true);
 			System.setProperty("webdriver.ie.driver", "./Browser/IEDriverServer.exe");
-			driver=new InternetExplorerDriver(cap);
+			InternetExplorerOptions options = new InternetExplorerOptions();
+			options.merge(cap);
+			driver=new InternetExplorerDriver(options);
 		}
 		else
 		{
@@ -119,7 +128,9 @@ public class BrowserFactory {
 
 		} else if (browser.equalsIgnoreCase("IE")) 
 		{
-			driver = new InternetExplorerDriver(cap);
+			InternetExplorerOptions options = new InternetExplorerOptions();
+			options.merge(cap);
+			driver = new InternetExplorerDriver(options);
 		} else
 		{
 			System.out.println("ERROR: Sorry This framework only support Chrome, FF, IE Browser");

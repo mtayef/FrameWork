@@ -8,45 +8,21 @@
 	<dependencies>
 
 		<dependency>
-
 			<groupId>org.seleniumhq.selenium</groupId>
-
 			<artifactId>selenium-java</artifactId>
-
 			<version>3.9.1</version>
-
 		</dependency>
 		<dependency>
-
-			<groupId>org.seleniumhq.selenium</groupId>
-
-			<artifactId>selenium-java</artifactId>
-
-			<version>3.4.0</version>
-
-		</dependency>
-
-
-		<dependency>
-
 			<groupId>org.testng</groupId>
-
 			<artifactId>testng</artifactId>
-
 			<version>6.9.10</version>
-
 			<scope>test</scope>
-
 		</dependency>
 
 		<dependency>
-
 			<groupId>com.relevantcodes</groupId>
-
 			<artifactId>extentreports</artifactId>
-
 			<version>2.41.2</version>
-
 		</dependency>
 
 
@@ -104,16 +80,12 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile>
 					</suiteXmlFiles>
-
-				 <systemPropertyVariables>
-
+<!-- 
+					<systemPropertyVariables>
 						<RuntimeBrowser>${Browser}</RuntimeBrowser>
-
 						<OSName>${OSName}</OSName>
-
 						<OSVersion>${version}</OSVersion>
-						
-					</systemPropertyVariables> 
+					</systemPropertyVariables> -->
 
 				</configuration>
 			</plugin>

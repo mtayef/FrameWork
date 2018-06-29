@@ -19,7 +19,6 @@ public class AddUser extends BaseClass
 		
 		LoginPage login = PageFactory.initElements(driver,LoginPage.class);
 		
-		
 		UserPage user = PageFactory.initElements(driver, UserPage.class);
 		
 		login.enterUserName(DataProviderFactory.getExcel().getStringData("Login", 0, 0));
