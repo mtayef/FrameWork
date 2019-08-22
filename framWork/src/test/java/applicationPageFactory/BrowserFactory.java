@@ -16,9 +16,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class BrowserFactory {
-	
+
+
+	// Setting up Browser using DesiredCapability. Hint: check DesiredCapability docs 
 	public static WebDriver startApplication(String browser,String url) 
 	{
+		// Initialize driver object
 		WebDriver driver = null;
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setJavascriptEnabled(true);
@@ -80,6 +83,7 @@ public class BrowserFactory {
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
+		// Complete all timing methods and return driver 
 		return driver;
 	}
 	
@@ -144,3 +148,4 @@ public class BrowserFactory {
 		return driver;
 	}
 }
+
